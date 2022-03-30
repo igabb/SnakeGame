@@ -8,10 +8,23 @@
 </head>
 <body>
     <canvas id="stage" width="400" height="400"></canvas>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
         window.onload = function() {
             var stage = document.getElementById('stage');
             var ctx = stage.getContext("2d");
+            
+            ctx.fillStyle = "black";
+            ctx.fillRect(0,0, stage.width, stage.height);
+
+            setInterval(game, 60);
+
+            const vel = 1;
+            var vx = vy = 0;
+            var px = 10;
+            var py = 15;
+
+
         }
+    </script>
 </body>
 </html>
