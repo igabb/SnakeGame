@@ -55,13 +55,16 @@
                 ctx.fillRect(0, 0, stage.width, stage.height);
 
                 ctx.fillStyle = "red";
-                ctx.fillRect(ax*tp, ay*tp, tp,tp)
+                ctx.fillRect(ax * tp, ay * tp, tp, tp)
 
                 ctx.fillStyle = "gray";
                 for (var i = 0; i < trail.length; i++) {
-                    ctx.fillRect(trail[i].x*lp, trail[i].y*tp, tp,tp);
+                    ctx.fillRect(trail[i].x * lp, trail[i].y * tp, tp, tp);
+                    if (trail[i].x == px && trail[i].y == py) {
+                        
+                    }
                 }
-                
+
             }
         }
     </script>
