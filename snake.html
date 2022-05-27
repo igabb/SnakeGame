@@ -59,7 +59,7 @@
 
                 ctx.fillStyle = "gray";
                 for (var i = 0; i < trail.length; i++) {
-                    ctx.fillRect(trail[i].x * lp, trail[i].y * tp, tp, tp);
+                    ctx.fillRect(trail[i].x * tp, trail[i].y * tp, tp, tp);
                     if (trail[i].x == px && trail[i].y == py) {
                         vx = vy = 0;
                     }
@@ -71,7 +71,7 @@
                 }
 
                 if (ax == px && ay == py) {
-                    trail++;
+                    tail++;
                     ax = Math.floor(Math.random() * qp);
                     ay = Math.floor(Math.random() * qp);
                 }
@@ -80,16 +80,24 @@
             function keyPush(event) {
                 switch (event.keyCode) {
                     case 37: // left
-                    vx = -vel;
-                    vy = 0;
-                    break;
+                        vx = -vel;
+                        vy = 0;
+                        break;
                     case 38: //up
-                    vx = 0;
-                    vy = -vel;
-                    break;
+                        vx = 0;
+                        vy = -vel;
+                        break;
                     case 39: // right
-                    vx = vel;
-                    vy = 0;
+                        vx = vel;
+                        vy = 0;
+                        break;
+                    case 40: // down
+                        vx = 0;
+                        vy = vel;
+                        break;
+                    default:
+
+                        break;
                 }
             }
         }
