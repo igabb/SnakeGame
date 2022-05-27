@@ -16,7 +16,7 @@
 
             var stage = document.getElementById('stage');
             var ctx = stage.getContext("2d");
-
+            document.addEventListener("keydown", keyPush)
             setInterval(game, 60);
 
             const vel = 1;
@@ -78,7 +78,7 @@
             }
 
             function keyPush(event) {
-                
+
             }
         }
     </script>
